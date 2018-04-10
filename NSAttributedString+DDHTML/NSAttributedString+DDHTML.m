@@ -318,7 +318,7 @@
             {
                 NSString *title = [NSString stringWithCString:(const char *)value encoding:NSUTF8StringEncoding];
                 NSString *link = attributeDictionary[@"href"];
-                [nodeAttributedString addAttribute:NSLinkAttributeName value:link range:NSMakeRange(0, title.length)];
+                [nodeAttributedString addAttribute:NSLinkAttributeName value:link ?: @"" range:NSMakeRange(0, title.length)];
             }
         }
         
